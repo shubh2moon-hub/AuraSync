@@ -1,0 +1,15 @@
+{
+ "id": "demon_slayer",
+ "name": "Demon Slayer: Neo Tokyo",
+ "description": "Tanjiro",
+ "credits": "Anime & Movie Live Wallpaper Edition",
+ "license": "Personal live wallpaper synchronization",
+ "default_color": "#00ff9d",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ }
+}

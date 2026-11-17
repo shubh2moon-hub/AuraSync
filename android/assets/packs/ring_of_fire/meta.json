@@ -1,0 +1,15 @@
+{
+ "id": "ring_of_fire",
+ "name": "Ring of Fire",
+ "description": "A golden ring burning above a lone knight.",
+ "credits": "Wallpaper Engine / Community Artwork",
+ "license": "Fair use / Personal wallpaper synchronization",
+ "default_color": "#ffd400",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ }
+}

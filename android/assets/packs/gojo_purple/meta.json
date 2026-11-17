@@ -1,0 +1,15 @@
+{
+ "id": "gojo_purple",
+ "name": "Jujutsu Kaisen: Gojo",
+ "description": "Gojo unleashing Hollow Purple with Six Eyes.",
+ "credits": "Anime & Movie Live Wallpaper Edition",
+ "license": "Personal live wallpaper synchronization",
+ "default_color": "#bf00ff",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ }
+}

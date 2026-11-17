@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AuraSync Library</title>
+<style>
+  :root { --bg: #0b0c10; --panel: #14161c; --line: #262a33; --text: #e8eaef; --muted: #8b92a1; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { padding: 20px 24px 8px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  h1 { font-size: 20px; margin: 0; }
+  header p { margin: 0; color: var(--muted); }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 20px; padding: 12px 24px 24px; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; padding: 12px 16px; } }
+
+  .stage { display: flex; gap: 16px; align-items: center; justify-content: center; background: #000;
+           border: 1px solid var(--line); border-radius: 10px; padding: 16px; min-height: 320px; }
+  .scene { position: relative; max-height: 70vh; display: flex; align-items: center; justify-content: center; }
+  .scene canvas { display: block; max-width: 100%; max-height: 70vh; object-fit: contain; }
+  .stage.phone_portrait .scene canvas { aspect-ratio: 1080 / 2408; border: 3px solid #2b2f38; border-radius: 22px; box-shadow: 0 8px 32px rgba(0,0,0,0.7); }
+  .stage.phone_landscape .scene canvas { aspect-ratio: 2408 / 1080; border: 3px solid #2b2f38; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.7); }
+  .stage.pc .scene canvas { aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 6px; }
+  .stage .phone, .stage .frame { display: none; }
+  .caption { margin: 10px 2px 0; color: var(--muted); }
+  .caption b { color: var(--text); font-weight: 600; }
+
+  aside { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; align-self: start; }
+  aside h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 16px 0 8px; font-weight: 600; }
+  aside h2:first-child { margin-top: 0; }
+  .seg { display: flex; flex-wrap: wrap; gap: 6px; }
+  .seg button, .primary { background: #1c1f27; color: var(--text); border: 1px solid var(--line); border-radius: 6px;
+                padding: 6px 10px; font: inherit; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: #2a2f3b; border-color: #4b5263; }
+  .seg button small { color: var(--muted); margin-left: 4px; }
+  button:focus-visible, .card:focus-visible, input:focus-visible { outline: 2px solid #8ab4ff; outline-offset: 2px; }
+  .primary { width: 100%; margin-top: 10px; background: #e8eaef; color: #0b0c10; border-color: #e8eaef; font-weight: 600; padding: 8px; }
+  .primary:disabled { opacity: .5; cursor: default; }
+  input[type=range] { width: 100%; }
+  .phoneonly[hidden] { display: none; }
+  .status { color: var(--muted); font-size: 12px; min-height: 18px; margin-top: 6px; }
+  .swatches { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .swatches button { width: 28px; height: 28px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; }
+  .swatches button[aria-pressed="true"] { border-color: #fff; }
+  input[type=color] { width: 36px; height: 30px; border: 1px solid var(--line); background: none; border-radius: 6px; padding: 2px; }
+  .note { color: var(--muted); font-size: 12px; margin-top: 14px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; padding: 0 24px 32px; }
+  @media (max-width: 900px) { .grid { padding: 0 16px 24px; } }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; cursor: pointer;
+          text-align: left; color: inherit; font: inherit; padding: 0; }
+  .card[aria-pressed="true"] { border-color: #6b7385; }
+  .card .thumbs { display: flex; height: 124px; background: #000; }
+  .card .thumbs img { display: block; height: 100%; object-fit: cover; }
+  .card .thumbs img:first-child { flex: 1 1 auto; min-width: 0; width: 0; }
+  .card div.t { padding: 10px 12px; }
+  .card b { display: block; }
+  .card span { color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>AuraSync Library</h1>
+  <p>Phone-first procedural wallpapers with real-time RGB lighting sync across Phone &amp; PC.</p>
+</header>
+<main>
+  <section>
+    <div class="stage phone_portrait" id="stage">
+      <div class="scene" id="scene">
+        <canvas id="cv"></canvas>
+      </div>
+    </div>
+    <p class="caption"><b id="title"></b> <span id="desc"></span></p>
+  </section>
+  <aside>
+    <h2>View Mode / Device</h2>
+    <div class="seg" id="device"></div>
+    <h2>Effect</h2>
+    <div class="seg" id="effects"></div>
+    <h2>Speed</h2>
+    <div class="seg" id="speed"></div>
+    <h2>Color</h2>
+    <div class="swatches" id="swatches"></div>
+    <p class="note">Effects marked <b>kbd</b> also run on your TUF keyboard through G-Helper. The others are wallpaper-only.</p>
+  </aside>
+</main>
+<div class="grid" id="grid"></div>
+<script src="effects.js"></script>
+<script>
+const COLORS = ["#ff2a3a", "#ff6a00", "#ffd400", "#2bff88", "#00e5ff", "#3d7bff", "#7a5cff", "#ff2fb4", "#ffffff"];
+const state = { pack: null, device: "phone_portrait", effect: "rainbow", speed: "normal", color: null };
+let packs = [], layers = null, img = null;
+const cv = document.getElementById("cv"), ctx = cv.getContext("2d", { willReadFrequently: true });
+
+const hexRgb = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16) / 255);
+
+function seg(el, items, key, onPick) {
+  el.innerHTML = "";
+  for (const [val, label, extra] of items) {
+    const b = document.createElement("button");
+    b.innerHTML = label + (extra ? ` <small>${extra}</small>` : "");
+    b.setAttribute("aria-pressed", state[key] === val);
+    b.onclick = () => { state[key] = val; seg(el, items, key, onPick); onPick && onPick(); };
+    el.appendChild(b);
+  }
+}
+
+function swatches() {
+  const el = document.getElementById("swatches");
+  el.innerHTML = "";
+  for (const c of COLORS) {
+    const b = document.createElement("button");
+    b.style.background = c; b.setAttribute("aria-label", "Color " + c);
+    b.setAttribute("aria-pressed", state.color === c);
+    b.onclick = () => { state.color = c; swatches(); };
+    el.appendChild(b);
+  }
+  const pick = document.createElement("input");
+  pick.type = "color"; pick.value = state.color; pick.setAttribute("aria-label", "Custom color");
+  pick.oninput = () => { state.color = pick.value; };
+  el.appendChild(pick);
+}
+
+const loadImage = src => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; });
+
+async function loadLayers() {
+  if (!state.pack) return;
+  const p = state.pack;
+  let bSrc = `packs/${p.id}/phone_base.jpg`;
+  let lSrc = `packs/${p.id}/phone_light.jpg`;
+  if (state.device === "phone_landscape") {
+    bSrc = `packs/${p.id}/phone_land_base.jpg`;
+    lSrc = `packs/${p.id}/phone_land_light.jpg`;
+  } else if (state.device === "pc") {
+    bSrc = `packs/${p.id}/pc_base.jpg`;
+    lSrc = `packs/${p.id}/pc_light.jpg`;
+  }
+  const [b, l] = await Promise.all([loadImage(bSrc), loadImage(lSrc)]);
+  const w = b.width, h = b.height;
+  cv.width = w; cv.height = h;
+  ctx.drawImage(b, 0, 0); const base = ctx.getImageData(0, 0, w, h).data.slice();
+  ctx.drawImage(l, 0, 0); const ld = ctx.getImageData(0, 0, w, h).data;
+  const light = new Uint8ClampedArray(w * h);
+  for (let i = 0; i < w * h; i++) light[i] = ld[i * 4];
+  layers = { w, h, base, light };
+  img = ctx.createImageData(w, h);
+  document.getElementById("title").textContent = p.name;
+  document.getElementById("desc").textContent = "· " + p.description;
+  layout();
+}
+
+function layout() {
+  const st = document.getElementById("stage");
+  st.className = "stage " + state.device;
+}
+
+function selectPack(p) {
+  state.pack = p;
+  state.color = p.default_color;
+  swatches();
+  document.querySelectorAll(".card").forEach(c => c.setAttribute("aria-pressed", c.dataset.id === p.id));
+  loadLayers();
+}
+
+function frame(now) {
+  requestAnimationFrame(frame);
+  if (!layers) return;
+  const t = now / 1000, fx = AuraEffects.EFFECTS[state.effect];
+  const e = { color: hexRgb(state.color), speed: state.speed };
+  const cols = new Array(layers.w);
+  if (fx.uniform) cols.fill(fx.at(e, t, 0));
+  else for (let x = 0; x < layers.w; x++) cols[x] = fx.at(e, t, x / (layers.w - 1));
+  AuraEffects.composite(img.data, layers.base, layers.light, cols, layers.w);
+  ctx.putImageData(img, 0, 0);
+}
+
+async function init() {
+  packs = (await (await fetch("packs/library.json")).json()).packs;
+  const grid = document.getElementById("grid");
+  for (const p of packs) {
+    const b = document.createElement("button");
+    b.className = "card"; b.dataset.id = p.id;
+    b.innerHTML = `<div class="thumbs">
+                     <img src="packs/${p.id}/phone_preview.jpg" style="width: 58px; height: 100%; object-fit: cover;" alt="">
+                     <img src="packs/${p.id}/pc_preview.jpg" style="flex: 1 1 auto; height: 100%; object-fit: cover;" alt="">
+                   </div>
+                   <div class="t"><b>${p.name}</b><span>${p.description}</span></div>`;
+    b.onclick = () => selectPack(p);
+    grid.appendChild(b);
+  }
+  seg(document.getElementById("device"), [
+    ["phone_portrait", "Phone (Portrait)"],
+    ["phone_landscape", "Phone (Landscape)"],
+    ["pc", "PC Desktop"]
+  ], "device", () => { loadLayers(); });
+  seg(document.getElementById("effects"), Object.entries(AuraEffects.EFFECTS).map(([k, v]) => [k, v.name, v.keyboard ? "kbd" : ""]), "effect");
+  seg(document.getElementById("speed"), [["slow", "Slow"], ["normal", "Normal"], ["fast", "Fast"]], "speed");
+  window.addEventListener("resize", layout);
+  selectPack(packs[0]);
+  requestAnimationFrame(frame);
+}
+init();
+</script>
+</body>
+</html>

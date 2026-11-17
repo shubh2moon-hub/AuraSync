@@ -1,0 +1,15 @@
+{
+ "id": "deep_shark",
+ "name": "Deep Shark",
+ "description": "A shark with glowing green stripes.",
+ "credits": "Wallpaper Engine / Community Artwork",
+ "license": "Fair use / Personal wallpaper synchronization",
+ "default_color": "#2bff88",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ }
+}

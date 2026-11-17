@@ -1,0 +1,19 @@
+{
+ "id": "flow",
+ "name": "Flow",
+ "description": "Silky ribbons of light flowing through the dark.",
+ "credits": "AuraSync original",
+ "license": "Original artwork, generated for AuraSync",
+ "default_color": "#3d7bff",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ },
+ "pc": {
+  "w": 3840,
+  "h": 2160
+ }
+}

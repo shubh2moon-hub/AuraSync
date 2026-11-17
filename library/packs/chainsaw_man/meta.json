@@ -1,0 +1,15 @@
+{
+ "id": "chainsaw_man",
+ "name": "Chainsaw Man: Denji",
+ "description": "Denji unleashing chainsaw devil form with crimson blood and neon city backdrop.",
+ "credits": "Anime & Movie Live Wallpaper Edition",
+ "license": "Personal live wallpaper synchronization",
+ "default_color": "#ff1a1a",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ }
+}

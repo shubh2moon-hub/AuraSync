@@ -1,0 +1,15 @@
+{
+ "id": "mega_city",
+ "name": "Mega City",
+ "description": "A cyberpunk city seen from above.",
+ "credits": "Wallpaper Engine / Community Artwork",
+ "license": "Fair use / Personal wallpaper synchronization",
+ "default_color": "#00e5ff",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ }
+}

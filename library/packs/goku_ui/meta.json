@@ -1,0 +1,15 @@
+{
+ "id": "goku_ui",
+ "name": "Dragon Ball: Ultra Instinct",
+ "description": "Goku Kamehameha with divine Ultra Instinct energy.",
+ "credits": "Anime & Movie Live Wallpaper Edition",
+ "license": "Personal live wallpaper synchronization",
+ "default_color": "#00d2ff",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ }
+}

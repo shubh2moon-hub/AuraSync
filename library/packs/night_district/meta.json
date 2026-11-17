@@ -1,0 +1,19 @@
+{
+ "id": "night_district",
+ "name": "Night District",
+ "description": "Foggy neon skyline with lit tower edges, signs and a rain-soaked street.",
+ "credits": "AuraSync original",
+ "license": "Original artwork, generated for AuraSync",
+ "default_color": "#ff3b5c",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ },
+ "pc": {
+  "w": 3840,
+  "h": 2160
+ }
+}

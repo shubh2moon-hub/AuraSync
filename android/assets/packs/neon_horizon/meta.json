@@ -1,0 +1,19 @@
+{
+ "id": "neon_horizon",
+ "name": "Neon Horizon",
+ "description": "Retro sunset with a striped sun, wireframe mountains and an endless grid.",
+ "credits": "AuraSync original",
+ "license": "Original artwork, generated for AuraSync",
+ "default_color": "#ff2fb4",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ },
+ "pc": {
+  "w": 3840,
+  "h": 2160
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "id": "one_piece",
+ "name": "One Piece: Gear 5",
+ "description": "Monkey D. Luffy in Sun God Nika Gear 5 form radiating divine lightning.",
+ "credits": "Anime & Movie Live Wallpaper Edition",
+ "license": "Personal live wallpaper synchronization",
+ "default_color": "#ffd700",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ }
+}

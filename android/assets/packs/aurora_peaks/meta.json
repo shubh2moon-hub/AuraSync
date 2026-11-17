@@ -1,0 +1,19 @@
+{
+ "id": "aurora_peaks",
+ "name": "Aurora Peaks",
+ "description": "Aurora curtains over snowy peaks, reflected in a mirror-still lake.",
+ "credits": "AuraSync original",
+ "license": "Original artwork, generated for AuraSync",
+ "default_color": "#2bff88",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ },
+ "pc": {
+  "w": 3840,
+  "h": 2160
+ }
+}

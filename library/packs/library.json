@@ -1,0 +1,531 @@
+{
+ "packs": [
+  {
+   "id": "aot_mikasa",
+   "name": "Attack on Titan: Wall Maria",
+   "description": "Mikasa Ackerman with gleaming ultrahard steel blades.",
+   "credits": "Anime & Movie Live Wallpaper Edition",
+   "license": "Personal live wallpaper synchronization",
+   "default_color": "#ff3838",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "arcade_den",
+   "name": "Arcade Den",
+   "description": "A neon-lit gamer room, every sign alive.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#ff2fb4",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "astro_nebula",
+   "name": "Astronaut Nebula",
+   "description": "A helmet full of galaxy; the nebula and visor glow.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#00e5ff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "aurora_peaks",
+   "name": "Aurora Peaks",
+   "description": "Aurora curtains over snowy peaks, reflected in a mirror-still lake.",
+   "credits": "AuraSync original",
+   "license": "Original artwork, generated for AuraSync",
+   "default_color": "#2bff88",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   },
+   "pc": {
+    "w": 3840,
+    "h": 2160
+   }
+  },
+  {
+   "id": "chainsaw_man",
+   "name": "Chainsaw Man: Denji",
+   "description": "Denji unleashing chainsaw devil form with crimson blood and neon city backdrop.",
+   "credits": "Anime & Movie Live Wallpaper Edition",
+   "license": "Personal live wallpaper synchronization",
+   "default_color": "#ff1a1a",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "circuit",
+   "name": "Circuit",
+   "description": "Dark PCB with glowing trace buses flowing between chips.",
+   "credits": "AuraSync original",
+   "license": "Original artwork, generated for AuraSync",
+   "default_color": "#00e5ff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   },
+   "pc": {
+    "w": 3840,
+    "h": 2160
+   }
+  },
+  {
+   "id": "darth_vader",
+   "name": "Star Wars: Sith Lord",
+   "description": "Darth Vader vs Ahsoka lightsaber duel on volcanic world.",
+   "credits": "Anime & Movie Live Wallpaper Edition",
+   "license": "Personal live wallpaper synchronization",
+   "default_color": "#ff0033",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "deep_shark",
+   "name": "Deep Shark",
+   "description": "A shark with glowing green stripes.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#2bff88",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "demon_slayer",
+   "name": "Demon Slayer: Neo Tokyo",
+   "description": "Tanjiro",
+   "credits": "Anime & Movie Live Wallpaper Edition",
+   "license": "Personal live wallpaper synchronization",
+   "default_color": "#00ff9d",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "edgerunners",
+   "name": "Edgerunners: Moon",
+   "description": "Lucy and David on the moon with illuminated cyberware.",
+   "credits": "Anime & Movie Live Wallpaper Edition",
+   "license": "Personal live wallpaper synchronization",
+   "default_color": "#00e5ff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "flow",
+   "name": "Flow",
+   "description": "Silky ribbons of light flowing through the dark.",
+   "credits": "AuraSync original",
+   "license": "Original artwork, generated for AuraSync",
+   "default_color": "#3d7bff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   },
+   "pc": {
+    "w": 3840,
+    "h": 2160
+   }
+  },
+  {
+   "id": "glow_shore",
+   "name": "Glow Shore",
+   "description": "A bioluminescent beach at night.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#00e5ff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "gojo_purple",
+   "name": "Jujutsu Kaisen: Gojo",
+   "description": "Gojo unleashing Hollow Purple with Six Eyes.",
+   "credits": "Anime & Movie Live Wallpaper Edition",
+   "license": "Personal live wallpaper synchronization",
+   "default_color": "#bf00ff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "goku_ui",
+   "name": "Dragon Ball: Ultra Instinct",
+   "description": "Goku Kamehameha with divine Ultra Instinct energy.",
+   "credits": "Anime & Movie Live Wallpaper Edition",
+   "license": "Personal live wallpaper synchronization",
+   "default_color": "#00d2ff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "hex_core",
+   "name": "Hex Core",
+   "description": "Dark hexagon plating with energised seams around a glowing core.",
+   "credits": "AuraSync original",
+   "license": "Original artwork, generated for AuraSync",
+   "default_color": "#ff6a00",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   },
+   "pc": {
+    "w": 3840,
+    "h": 2160
+   }
+  },
+  {
+   "id": "hyperlane",
+   "name": "Hyperlane",
+   "description": "A deep sci-fi corridor of chamfered frames and racing light strips.",
+   "credits": "AuraSync original",
+   "license": "Original artwork, generated for AuraSync",
+   "default_color": "#7a5cff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   },
+   "pc": {
+    "w": 3840,
+    "h": 2160
+   }
+  },
+  {
+   "id": "interstellar",
+   "name": "Interstellar: Gargantua",
+   "description": "Supermassive black hole Gargantua with relativistic accretion disk.",
+   "credits": "Anime & Movie Live Wallpaper Edition",
+   "license": "Personal live wallpaper synchronization",
+   "default_color": "#00e5ff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "mega_city",
+   "name": "Mega City",
+   "description": "A cyberpunk city seen from above.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#00e5ff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "midnight_konbini",
+   "name": "Midnight Konbini",
+   "description": "A quiet Tokyo street, signs buzzing in the dark.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#ff6a00",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "neon_circuit",
+   "name": "Neon Circuit",
+   "description": "Glowing circuit lanes cutting through a cube.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#ff6a00",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "neon_horizon",
+   "name": "Neon Horizon",
+   "description": "Retro sunset with a striped sun, wireframe mountains and an endless grid.",
+   "credits": "AuraSync original",
+   "license": "Original artwork, generated for AuraSync",
+   "default_color": "#ff2fb4",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   },
+   "pc": {
+    "w": 3840,
+    "h": 2160
+   }
+  },
+  {
+   "id": "neon_portal",
+   "name": "Neon Portal",
+   "description": "A glowing ring in a dark cave, reflected below.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#ff2fb4",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "night_district",
+   "name": "Night District",
+   "description": "Foggy neon skyline with lit tower edges, signs and a rain-soaked street.",
+   "credits": "AuraSync original",
+   "license": "Original artwork, generated for AuraSync",
+   "default_color": "#ff3b5c",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   },
+   "pc": {
+    "w": 3840,
+    "h": 2160
+   }
+  },
+  {
+   "id": "one_piece",
+   "name": "One Piece: Gear 5",
+   "description": "Monkey D. Luffy in Sun God Nika Gear 5 form radiating divine lightning.",
+   "credits": "Anime & Movie Live Wallpaper Edition",
+   "license": "Personal live wallpaper synchronization",
+   "default_color": "#ffd700",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "orbit_window",
+   "name": "Orbit Window",
+   "description": "A bedroom with a view of the planet.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#3d7bff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "pink_planet",
+   "name": "Pink Planet",
+   "description": "A magenta world rising over a lone walker.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#ff2fb4",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "prism_cube",
+   "name": "Prism Cube",
+   "description": "A glass cube refracting colour.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#7a5cff",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "red_alley",
+   "name": "Red Alley",
+   "description": "Lit houses and lanterns in a red night.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#ff3b3b",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "ring_of_fire",
+   "name": "Ring of Fire",
+   "description": "A golden ring burning above a lone knight.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#ffd400",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "spider_verse",
+   "name": "Spider-Verse: Leap",
+   "description": "Miles Morales leap through neon Manhattan.",
+   "credits": "Anime & Movie Live Wallpaper Edition",
+   "license": "Personal live wallpaper synchronization",
+   "default_color": "#ff1744",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "synth_peaks",
+   "name": "Synth Peaks",
+   "description": "Retro-wave mountains under a violet sky.",
+   "credits": "Wallpaper Engine / Community Artwork",
+   "license": "Fair use / Personal wallpaper synchronization",
+   "default_color": "#ff2fb4",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  },
+  {
+   "id": "vanguard",
+   "name": "Vanguard",
+   "description": "Dark armour plating cut at one sharp angle, with glowing seams and chevrons.",
+   "credits": "AuraSync original",
+   "license": "Original artwork, generated for AuraSync",
+   "default_color": "#ff1e1e",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   },
+   "pc": {
+    "w": 3840,
+    "h": 2160
+   }
+  },
+  {
+   "id": "your_name",
+   "name": "Your Name: Twilight Comet",
+   "description": "Taki on Tokyo rooftop gazing at the splitting Tiamat comet.",
+   "credits": "Anime & Movie Live Wallpaper Edition",
+   "license": "Personal live wallpaper synchronization",
+   "default_color": "#5e72e4",
+   "phone": {
+    "mode": "native",
+    "x0": 0.0,
+    "x1": 1.0,
+    "land_x0": 0.0,
+    "land_x1": 1.0
+   }
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "id": "orbit_window",
+ "name": "Orbit Window",
+ "description": "A bedroom with a view of the planet.",
+ "credits": "Wallpaper Engine / Community Artwork",
+ "license": "Fair use / Personal wallpaper synchronization",
+ "default_color": "#3d7bff",
+ "phone": {
+  "mode": "native",
+  "x0": 0.0,
+  "x1": 1.0,
+  "land_x0": 0.0,
+  "land_x1": 1.0
+ }
+}
